@@ -12,16 +12,11 @@
 
 package com.example.crud.teste.src.test.java.com.baeldung.petstore.client.api;
 
-import com.baeldung.petstore.client.model.Usuario;
-import org.junit.Test;
-import org.junit.Ignore;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import com.example.crud.teste.src.main.java.com.baeldung.petstore.client.api.DefaultApi;
 import com.example.crud.teste.src.main.java.com.baeldung.petstore.client.model.Usuario;
+import io.swagger.codegen.v3.service.exception.ApiException;
+import org.junit.Ignore;
+import org.junit.Test;
 
 /**
  * API tests for DefaultApi

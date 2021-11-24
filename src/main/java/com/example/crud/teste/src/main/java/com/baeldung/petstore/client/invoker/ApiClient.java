@@ -1,6 +1,7 @@
 package com.example.crud.teste.src.main.java.com.baeldung.petstore.client.invoker;
 
 import com.example.crud.teste.src.main.java.com.baeldung.petstore.client.invoker.auth.Authentication;
+import com.fasterxml.jackson.datatype.threetenbp.ThreeTenModule;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,9 @@ import java.util.TimeZone;
 import com.example.crud.teste.src.main.java.com.baeldung.petstore.client.invoker.auth.HttpBasicAuth;
 import com.example.crud.teste.src.main.java.com.baeldung.petstore.client.invoker.auth.ApiKeyAuth;
 import com.example.crud.teste.src.main.java.com.baeldung.petstore.client.invoker.auth.OAuth;
+import org.threeten.bp.Instant;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.ZonedDateTime;
 
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-11-24T11:18:15.673669-03:00[America/Bahia]")@Component("com.baeldung.petstore.client.invoker.ApiClient")
 public class ApiClient {
