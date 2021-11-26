@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class Config {
+
     @Bean
     public Usuario usuario(){
         return new Usuario();
