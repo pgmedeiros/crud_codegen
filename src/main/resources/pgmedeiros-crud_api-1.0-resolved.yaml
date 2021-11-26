@@ -1,0 +1,43 @@
+---
+openapi: 3.0.0
+info:
+  title: poc_api
+  version: "1.0"
+servers:
+- url: https://virtserver.swaggerhub.com/pgmedeiros/poc_api/1.0
+  description: SwaggerHub API Auto Mocking
+paths:
+  /usuario:
+    description: Essa operação insere um novo usuário.
+    get:
+      responses:
+        "201":
+          description: Usuario encontrado com sucesso!
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuario'
+      responses:
+        "201":
+          description: Usuario cadastrado com sucesso!
+components:
+  schemas:
+    Usuario:
+      required:
+      - idUsuario
+      type: object
+      properties:
+        idUsuario:
+          type: integer
+        nome:
+          type: string
+          example: Pedro Medeiros
+        avatar:
+          type: string
+          format: binary

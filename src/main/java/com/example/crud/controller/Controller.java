@@ -1,19 +1,21 @@
 package com.example.crud.controller;
 
-import com.example.crud.teste.src.main.java.com.baeldung.petstore.client.model.Usuario;
+import com.example.poc_swagger_gen_with_springboot.rest.api.UsuarioApi;
+import com.example.poc_swagger_gen_with_springboot.rest.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Controller {
+public class Controller{
 
     @Autowired
     Usuario usuario;
 
-    @GetMapping("/")
-    public String get(){
-        usuario.setNome("Pedro Medeiro");
+    @GetMapping("/{name}")
+    public String get(@PathVariable("name") String name){
+        usuario.setNome(name);
         return usuario.getNome();
     }
 
